@@ -1,0 +1,29 @@
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px 0 5px 0;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0 );
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.spacer {
+  flex-grow: 1;
+}

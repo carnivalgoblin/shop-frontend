@@ -1,0 +1,68 @@
+$bgColor: #DFDFDE;
+$cardColor: #F7F5F2;
+$favFullColor: #F56D91;
+$linkColor: #395B64;
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 15px;
+  border-radius: 5% !important;
+  //background-color: $bgColor;
+}
+
+.product-price {
+  margin: 5px 0;
+}
+
+.product-button {
+  margin: 0 5px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 0 auto 10px auto;
+  border-radius: 3%;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 15px;
+  box-shadow: 4px 4px 4px lightgray;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: $cardColor;
+}
+
+.mat-card-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: $linkColor;
+}
+
+.mat-card-actions > .mat-primary {
+  margin: 10px !important;
+  color: $linkColor;
+}
+
+.director-button {
+  color: $linkColor;
+  padding: 0;
+}
+
+.mat-card-title {
+  text-align: center;
+}
+
+.mat-card-subtitle {
+  text-align: center;
+}

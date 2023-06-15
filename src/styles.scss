@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary-color: #FAF0E4;
+$secondary-color: #9BCDD2;
+$tertiary-color: #FF8551;
+$quarternary-color: #FFDEDE;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: $primary-color}
+
+.container {
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 60%;
+
+  text-align: center;
+  line-height: 2rem;
+}
+
+.heading {}
+
+.text {}
