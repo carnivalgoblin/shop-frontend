@@ -32,6 +32,11 @@ export class ProductCardComponent implements OnInit{
   // }
 
   getProducts(): void {
-    this.productService.getProducts().subscribe(product => this.products = product)
+    //this.productService.getProducts().subscribe(product => this.products = product)
+    this.productService.getProducts().subscribe((resp: any) => {
+      this.products = resp;
+      console.log( this.products )
+      return this.products;
+    })
   }
 }

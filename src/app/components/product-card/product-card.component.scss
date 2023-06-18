@@ -3,6 +3,10 @@ $cardColor: #F7F5F2;
 $favFullColor: #F56D91;
 $linkColor: #395B64;
 
+.product-container {
+  max-width: 80%;
+}
+
 .product-card {
   display: flex;
   flex-direction: row;
@@ -10,6 +14,7 @@ $linkColor: #395B64;
   justify-content: center;
   padding: 15px 15px;
   border-radius: 5% !important;
+  //max-width: 270px;
   //background-color: $bgColor;
 }
 
@@ -25,44 +30,46 @@ img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  margin: 0 auto 10px auto;
+  margin: 10px;
   border-radius: 3%;
 }
 
-.mat-card {
+.mat-mdc-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 15px;
   box-shadow: 4px 4px 4px lightgray;
-  border: 1px solid lightgrey;
+  //border: 1px solid lightgrey;
   border-radius: 10px;
   background-color: $cardColor;
+  margin: 15px;
+  width: 300px;
 }
 
-.mat-card-header {
+.mat-mdc-card-header {
   height: 80px;
   display: flex;
   align-items: center;
   color: $linkColor;
 }
 
-.mat-card-actions > .mat-primary {
+.mat-mdc-card-actions > .mat-primary {
   margin: 10px !important;
   color: $linkColor;
 }
 
-.director-button {
-  color: $linkColor;
-  padding: 0;
-}
-
-.mat-card-title {
+.mat-mdc-card-title {
+  margin-top: 20px;
   text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 64px;
+  white-space: nowrap;
+  width: 250px;
 }
 
-.mat-card-subtitle {
+.mat-mdc-card-subtitle {
   text-align: center;
 }

@@ -8,6 +8,7 @@ import {ProductCardComponent} from "./components/product-card/product-card.compo
 const routes: Routes = [
   { path: '', component: LandingViewComponent },
   { path: 'products', component: ProductCardComponent },
+  { path: 'product', component: ProductCardComponent },
   { path: 'account', component: AccountViewComponent }
 ];
 

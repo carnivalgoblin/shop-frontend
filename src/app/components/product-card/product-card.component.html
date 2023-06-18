@@ -1,22 +1,27 @@
-<div class="card product-card" style="display: flex;">
-  <mat-card *ngFor="let product of products">
-    <mat-card-header>
-      <mat-card-title class="product-name">{{product.name}}</mat-card-title>
-      <mat-card-subtitle class="product-price">{{product.price}}</mat-card-subtitle>
-    </mat-card-header>
-    <img src="./assets/product-placeholder.png" alt=altName />
-    <mat-card-actions>
-      <button class="product-button" mat-stroked-button color="primary">Add to cart</button>
-      <button class="product-button" mat-stroked-button color="primary">Description</button>
+<div class="container product-container">
+  <div class="card product-card">
+    <mat-card *ngFor="let product of products">
+      <mat-card-header>
+        <mat-card-title class="product-name">{{product.name}}</mat-card-title>
+        <mat-card-subtitle class="product-price">{{product.price}} €</mat-card-subtitle>
+        <mat-card-subtitle class="product-price">{{product.category}}</mat-card-subtitle>
+      </mat-card-header>
+      <img src="./assets/product-placeholder.png" alt=altName />
+      <mat-card-actions>
+        <button class="product-button" mat-stroked-button color="primary">Add to cart</button>
+        <button class="product-button" mat-stroked-button color="primary">Description</button>
 
-      <!--        TODO ngIf for Wishlist -->
-      <!--        <button mat-stroked-button color="primary">-->
-      <!--          <mat-icon>favorite_border</mat-icon>-->
-      <!--        </button>-->
-      <!--        <button mat-stroked-button color="primary">-->
-      <!--          <mat-icon>favorite</mat-icon>-->
-      <!--        </button>-->
+        <!--        TODO ngIf for Wishlist -->
+        <!--        <button mat-stroked-button color="primary">-->
+        <!--          <mat-icon>favorite_border</mat-icon>-->
+        <!--        </button>-->
+        <!--        <button mat-stroked-button color="primary">-->
+        <!--          <mat-icon>favorite</mat-icon>-->
+        <!--        </button>-->
 
-    </mat-card-actions>
-  </mat-card>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
+
+<!--*ngFor="let product of products"-->
