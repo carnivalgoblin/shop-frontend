@@ -1,0 +1,28 @@
+<div class="container cart-container">
+
+  <div class="card product-card">
+    <mat-card *ngFor="let item of cart.items">
+
+      <mat-card-header>
+
+        <mat-card-title class="product-name">{{ item.product.name }}</mat-card-title>
+        <mat-card-subtitle class="product-price">Anzahl: {{ item.count }}</mat-card-subtitle>
+        <mat-card-subtitle class="product-price">Kosten: {{ item.count * item.product.price}} €</mat-card-subtitle>
+
+      </mat-card-header>
+
+      <img src="./assets/product-placeholder.png" alt=altName />
+
+      <mat-card-actions>
+        <button class="product-button" mat-stroked-button color="primary">Remove</button>
+        <button class="product-button" mat-stroked-button color="primary">Description</button>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+
+  <div class="order-summary">
+  ORDER SUMMARY
+  </div>
+
+</div>

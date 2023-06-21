@@ -1,14 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {cart} from "../../entity/cart";
 import {UserService} from "../../services/user.service";
-import {product} from "../../entity/product";
 
 @Component({
-  selector: 'account-view',
-  templateUrl: './account-view.component.html',
-  styleUrls: ['./account-view.component.scss']
+  selector: 'cart-view',
+  templateUrl: './cart-view.component.html',
+  styleUrls: ['./cart-view.component.scss']
 })
-export class AccountViewComponent implements OnInit{
+export class CartViewComponent implements OnInit{
 
   cart: any = [];
   user: any = {};
