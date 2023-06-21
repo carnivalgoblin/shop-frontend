@@ -1,0 +1,16 @@
+@import "src/styles";
+
+.modal-content {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  vertical-align: center;
+  background-color: $primary-color;
+  //border-radius: 5% !important;
+}
+
+
+.modal-description {
+  max-width: 300px;
+  margin: 0 auto 15px auto;
+}

@@ -1,26 +1,27 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {UserService} from "../../services/user.service";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'cart-view',
   templateUrl: './cart-view.component.html',
   styleUrls: ['./cart-view.component.scss']
 })
-export class CartViewComponent implements OnInit{
+export class CartViewComponent implements OnInit {
 
   cart: any = [];
   user: any = {};
 
-  @Input() userData = { Username: '', Password: '' }; // TODO MOVE TO LOGIN
+  @Input() userData = {Username: '', Password: ''}; // TODO MOVE TO LOGIN
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private cartService: CartService
   ) {
   }
 
   ngOnInit() {
     this.getUser();
-
   }
 
   getUser(): void {
@@ -45,4 +46,12 @@ export class CartViewComponent implements OnInit{
     })
   }
 
+  clearCart(): void {
+    this.cartService.clearCart(this.user.id);
+  }
+
+  removeFromCart(id: number): void {
+    console.log(id);
+    this.cartService.removeFromCart(id, this.user.id);
+  }
 }

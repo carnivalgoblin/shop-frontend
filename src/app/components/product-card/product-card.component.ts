@@ -68,8 +68,10 @@ export class ProductCardComponent implements OnInit {
 
   openProductDescription(product: product): void {
     const dialogRef = this.dialog.open(ProductModalComponent, {
-      width: '500px',
-      data: {description: product.description}
+      data: {
+        description: product.description,
+        title: product.name
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {

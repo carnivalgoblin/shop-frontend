@@ -1,7 +1,7 @@
 <div class="container cart-container">
 
   <div class="card product-card">
-    <mat-card *ngFor="let item of cart.items">
+    <mat-card *ngFor="let item of cart.items, let i = index">
 
       <mat-card-header>
 
@@ -11,10 +11,12 @@
 
       </mat-card-header>
 
-      <img src="./assets/product-placeholder.png" alt=altName />
+      <img src="./assets/product-placeholder.png" alt=altName/>
 
       <mat-card-actions>
-        <button class="product-button" mat-stroked-button color="primary">Remove</button>
+        <button class="product-button" mat-stroked-button color="warn" (click)="removeFromCart(item.product.id)">
+          Remove
+        </button>
         <button class="product-button" mat-stroked-button color="primary">Description</button>
       </mat-card-actions>
 
@@ -22,7 +24,8 @@
   </div>
 
   <div class="order-summary">
-  ORDER SUMMARY
+    <button class="product-button" mat-stroked-button color="warn" (click)="clearCart()">Clear Cart</button>
+    ORDER SUMMARY
   </div>
 
 </div>

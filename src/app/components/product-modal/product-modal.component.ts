@@ -10,7 +10,7 @@ export class ProductModalComponent {
 
   constructor(
     public dialogRef: MatDialogRef<ProductModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { description: string }
+    @Inject(MAT_DIALOG_DATA) public data: { description: string, title: string }
   ) {
   }
 

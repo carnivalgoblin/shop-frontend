@@ -23,4 +23,29 @@ export class CartService {
       }
     );
   }
+
+  removeFromCart(productId: number, userId: number): void {
+    const url = `${this.userApiUrl}/${userId}/cart/${productId}/delete`;
+    this.http.delete(url).subscribe(() => {
+        console.log('product removed');
+        location.reload();
+      },
+      error => {
+        console.error('Error clearing cart:', error);
+      }
+    );
+  }
+
+  clearCart(userId: number): void {
+    const url = `${this.userApiUrl}/${userId}/cart/delete`;
+    this.http.delete(url).subscribe(
+      () => {
+        console.log('Cart cleared');
+        location.reload();
+      },
+      error => {
+        console.error('Error clearing cart:', error);
+      }
+    );
+  }
 }
