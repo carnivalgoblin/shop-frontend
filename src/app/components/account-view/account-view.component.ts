@@ -1,22 +1,24 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {cart} from "../../entity/cart";
+import {MatDialog} from '@angular/material/dialog';
 import {UserService} from "../../services/user.service";
-import {product} from "../../entity/product";
+import {UserLoginFormComponent} from "../user-login-form/user-login-form.component";
+import {UserRegistrationFormComponent} from "../user-registration-form/user-registration-form.component";
 
 @Component({
   selector: 'account-view',
   templateUrl: './account-view.component.html',
   styleUrls: ['./account-view.component.scss']
 })
-export class AccountViewComponent implements OnInit{
+export class AccountViewComponent implements OnInit {
 
   cart: any = [];
   user: any = {};
 
-  @Input() userData = { Username: '', Password: '' }; // TODO MOVE TO LOGIN
+  @Input() userData = {Username: '', Password: ''}; // TODO MOVE TO LOGIN
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    public dialog: MatDialog
   ) {
   }
 
@@ -30,6 +32,13 @@ export class AccountViewComponent implements OnInit{
       this.user = result;
       console.log(this.user.id);
       console.log(this.user.firstName);
+
+
+      // if (localStorage.getItem('userId')) {
+      //   this.dialog.open(UserLoginFormComponent) {
+      //     width: '280px'
+      //   }
+      // }
 
       localStorage.setItem('id', this.user.id) // TODO move to login component, current user is logged here in regardless
       // TODO localStorage.getItem('id');
@@ -47,4 +56,15 @@ export class AccountViewComponent implements OnInit{
     })
   }
 
+  openUserRegistrationDialog(): void {
+    this.dialog.open(UserRegistrationFormComponent, {
+      width: '280px'
+    });
+  }
+
+  openUserLoginDialog(): void {
+    this.dialog.open(UserLoginFormComponent, {
+      width: '280px'
+    });
+  }
 }

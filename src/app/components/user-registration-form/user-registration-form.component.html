@@ -1,0 +1,20 @@
+<mat-card class="modal registration-modal">
+  <mat-card-header>
+    <mat-card-title class="modal-title registration-title">Sign up</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <mat-form-field>
+        <input matInput [(ngModel)]="userData.Email" type="email" placeholder="Email" name="Email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="userData.Password" type="password" placeholder="Password" name="Password" required>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="registerUser()" color="primary">
+      Sign up!
+    </button>
+  </mat-card-actions>
+</mat-card>

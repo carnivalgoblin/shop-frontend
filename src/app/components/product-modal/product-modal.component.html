@@ -1,6 +1,7 @@
-<div class="modal-content">accent
-
-  <h2>{{ data.title }}</h2>
+<mat-card class="modal-content">
+  <mat-card-header>
+    <mat-card-title class="modal-title">{{ data.title }}</mat-card-title>
+  </mat-card-header>
   <p class="modal-description">{{ data.description }}</p>
   <button mat-button (click)="close()" color="warn">Schließen</button>
-</div>
+</mat-card>

@@ -19,6 +19,10 @@ import {CartViewComponent} from './components/cart-view/cart-view.component';
 import {LoginViewComponent} from './components/login-view/login-view.component';
 import {ProductModalComponent} from './components/product-modal/product-modal.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {UserLoginFormComponent} from './components/user-login-form/user-login-form.component';
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
+import { UserRegistrationFormComponent } from './components/user-registration-form/user-registration-form.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     CartViewComponent,
     LoginViewComponent,
     ProductModalComponent,
+    UserLoginFormComponent,
+    UserRegistrationFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatListModule,
     MatCardModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

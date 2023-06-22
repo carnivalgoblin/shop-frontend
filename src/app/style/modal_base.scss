@@ -1,0 +1,17 @@
+@import "src/app/style/vars";
+
+.modal {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  vertical-align: center;
+  background-color: $primary-color !important;
+}
+
+modal-header {
+}
+
+.modal-title {
+  padding-bottom: 10px;
+
+}

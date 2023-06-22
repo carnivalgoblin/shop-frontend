@@ -1,6 +1,16 @@
 <div class="container account-container">
 
   <p>Hello {{user.firstName }},
-  this is your account overview.</p>
+    this is your account overview.</p>
+  <p>
+    Once you are logged in, your account details will show up here.
+  </p>
 
+</div>
+
+<div class="container">
+  <button mat-stroked-button (click)="openUserRegistrationDialog()" style="margin-right: 10px;" color="primary">Sign
+    Up
+  </button>
+  <button mat-stroked-button (click)="openUserLoginDialog()" style="margin-right: 10px;" color="primary">Login</button>
 </div>

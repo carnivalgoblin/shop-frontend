@@ -1,14 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary-color: #FAF0E4;
-$secondary-color: #9BCDD2;
-$tertiary-color: #FF8551;
-$quarternary-color: #FFDEDE;
-
+@import "src/app/style/custom";
 @import "src/app/style/vars";
+@import "src/app/style/modal_base";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: $primary-color}
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $primary-color
+}
 
 .container {
   padding: 50px 0;
@@ -19,9 +23,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
   line-height: 2rem;
 }
 
-.heading {}
+.heading {
+}
 
-.text {}
+.text {
+}
 
 .icon-button {
   color: $secondary-color !important;
