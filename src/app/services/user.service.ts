@@ -25,14 +25,14 @@ export class UserService {
 
   public userLogin(userDetails: any): Observable<any> {
     console.log(userDetails);
-    return this.http.post(userApiUrl + 'login', userDetails).pipe(
+    return this.http.post(userApiUrl + '/login', userDetails).pipe(
       catchError(this.handleError)
     );
   }
 
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
-    return this.http.post(userApiUrl + 'users/register', userDetails).pipe(
+    return this.http.post(userApiUrl + '/users/register', userDetails).pipe(
       catchError(this.handleError)
     );
   }
