@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {product} from "../entity/product";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
@@ -9,7 +9,8 @@ export class ProductService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+  }
 
   private productsApiUrl = 'http://localhost:8080/api/products';
   private userApiUrl = 'http://localhost:8080/api/user';
@@ -17,24 +18,18 @@ export class ProductService {
   getUser(userId: number) {
     const url = `${this.userApiUrl}/${userId}`;
     const headers = this.createHeaders();
-    return this.http.get(url, { headers });
+    return this.http.get(url, {headers});
   }
 
   getProducts() {
     const headers = this.createHeaders();
-    return this.http.get<product[]>(this.productsApiUrl, { headers });
+    return this.http.get<product[]>(this.productsApiUrl, {headers});
   }
 
   getProductById(id: number) {
     const url = `${this.productsApiUrl}/${id}`;
     const headers = this.createHeaders();
-    return this.http.get<product>(url, { headers });
-  }
-
-  getCart(userId: number) {
-    const url = `${this.userApiUrl}/${userId}/cart`;
-    const headers = this.createHeaders();
-    return this.http.get(url, { headers });
+    return this.http.get<product>(url, {headers});
   }
 
   private createHeaders() {

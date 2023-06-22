@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {CartService} from "../../services/cart.service";
+import {OrderService} from "../../services/order.service";
 
 @Component({
   selector: 'cart-view',
@@ -16,7 +17,8 @@ export class CartViewComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private cartService: CartService
+    private cartService: CartService,
+    private orderService: OrderService
   ) {
   }
 
@@ -47,7 +49,7 @@ export class CartViewComponent implements OnInit {
   }
 
   submitOrder() {
-    this.cartService.submitOrder(this.user.id);
+    this.orderService.submitOrder(this.user.id);
   }
 
   clearCart(): void {

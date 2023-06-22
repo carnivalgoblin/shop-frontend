@@ -35,17 +35,6 @@ export class CartService {
     );
   }
 
-  submitOrder(userId: number): void {
-    const url = `${this.userApiUrl}/${userId}/cart/submit`;
-    this.http.post(url, {}).subscribe(response => {
-        console.log('Order submitted: ', response);
-        this.clearCart(userId); // TODO check if clearing cart messes with order submission
-      },
-      error => {
-        console.error('Error submitting order:', error);
-      });
-  }
-
   clearCart(userId: number): void {
     const url = `${this.userApiUrl}/${userId}/cart/delete`;
     this.http.delete(url).subscribe(() => {
