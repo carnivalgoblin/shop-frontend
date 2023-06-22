@@ -46,6 +46,10 @@ export class CartViewComponent implements OnInit {
     })
   }
 
+  submitOrder() {
+    this.cartService.submitOrder(this.user.id);
+  }
+
   clearCart(): void {
     this.cartService.clearCart(this.user.id);
   }

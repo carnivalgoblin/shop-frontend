@@ -31,9 +31,21 @@ export class CartService {
         location.reload();
       },
       error => {
-        console.error('Error clearing cart:', error);
+        console.error('Error removing from cart:', error);
       }
     );
+  }
+
+  submitOrder(userId: number): void {
+    const url = `${this.userApiUrl}/${userId}/cart/submit`;
+    this.http.post(url, {}).subscribe(() => {
+        console.log('Order submitted');
+        this.clearCart(userId); // TODO check if clearing cart messes with order submission
+        location.reload();
+      },
+      error => {
+        console.error('Error submitting order:', error);
+      });
   }
 
   clearCart(userId: number): void {
