@@ -24,7 +24,6 @@ export class AccountViewComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
-
   }
 
   getUser(): void {

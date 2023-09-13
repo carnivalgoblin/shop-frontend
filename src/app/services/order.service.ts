@@ -20,7 +20,7 @@ export class OrderService {
     const url = `${this.orderApiUrl}/${userId}/cart/submit`;
     this.http.post(url, {}).subscribe(response => {
         console.log('Order submitted: ', response);
-        this.cartService.clearCart(userId); // TODO check if interfering with order submission
+        // this.cartService.clearCart(userId); // TODO fix interfering with order submission
       },
       error => {
         console.error('Error submitting order:', error);
